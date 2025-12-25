@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Tải Ảnh Bìa HD
-// @namespace    http://tampermonkey.net/
+// @namespace    CoverTool.By.Tui
 // @version      1.0
 // @description  fix tùm lum tá lả đm mấy con web chống trộm
 // @author       Tui
@@ -17,6 +17,8 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
 // @license      MIT
+// @updateURL    https://raw.githubusercontent.com/hikikomori1870-bit/DownloadHD-novel-covers/main/tai-anh-bia.user.js
+// @downloadURL  https://raw.githubusercontent.com/hikikomori1870-bit/DownloadHD-novel-covers/main/tai-anh-bia.user.js
 // ==/UserScript==
 
 (function() {
@@ -149,4 +151,5 @@
         else handleOthers();
     }
     setInterval(main, 1000);
+
 })();
