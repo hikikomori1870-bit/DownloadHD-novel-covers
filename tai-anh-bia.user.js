@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tải Ảnh Bìa HD
 // @namespace    CoverTool.By.Tui
-// @version      1.22
+// @version      1.2
 // @description  Phiên bản cập nhật mới bổ sung các web qidian, qimao, qdmm, readnovel, zhongheng, ihuaben, yunqi, shuqi; Các web hongshu, xbanxia, bfaloo, po18 hiện chưa mò ra để tạm đó chờ pb update sau (có tấm ảnh giấu như mèo giấu kít!!)
 // @author       Tui
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=qidian.com
@@ -298,4 +298,5 @@
     }
     setInterval(main, 1500);
 })();
+
 
