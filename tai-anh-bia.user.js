@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Tải Ảnh Bìa HD
 // @namespace    CoverTool.By.Tui
-// @version      2.0
-// @description  Pigupdate, cập nhật thêm 1 lô web mới cụ thể là 12 web
+// @version      2.1
+// @description  Pigupdate, chỉnh lại read novel douban vì bị thiếu
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=qidian.com
 // @match        *://www.jjwxc.net/onebook.php?novelid=*
 // @match        *://fanqienovel.com/page/*
@@ -454,10 +454,12 @@
                      document.querySelector('.cover img')?.src;
         if (rawUrl) {
             let cleanUrl = rawUrl.split('?')[0];
-            let hdUrl = cleanUrl.replace('/normal/', '/retina/');
+            let hdUrl = cleanUrl.split('!')[0];
+            hdUrl = hdUrl.replace('/normal/', '/retina/');
             if (hdUrl.startsWith('//')) hdUrl = 'https:' + hdUrl;
             hdUrl = hdUrl.replace('http:', 'https:');
             let bookId = window.location.href.match(/(column|ebook)\/(\d+)/)?.[2] || 'douban';
+            console.log('[CoverTool] Douban HD:', hdUrl);
             createBtn(hdUrl, `douban_${bookId}.jpg`);
         }
     }
